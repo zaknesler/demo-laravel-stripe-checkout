@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "94d4bf9ac7f4a933030e46a346ee2917",
+    "content-hash": "5248d64d579d51d8ba24395d88e8dcf3",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -2632,6 +2632,56 @@
                 "environment"
             ],
             "time": "2019-03-06T09:39:45+00:00"
+        },
+        {
+            "name": "zaknesler/tailwind-preset",
+            "version": "dev-next",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zaknesler/tailwind-preset.git",
+                "reference": "59cb234a0a38103a85111eed64cd73dfa6741b97"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zaknesler/tailwind-preset/zipball/59cb234a0a38103a85111eed64cd73dfa6741b97",
+                "reference": "59cb234a0a38103a85111eed64cd73dfa6741b97",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "^5.5"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "ZakNesler\\TailwindPreset\\TailwindServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "ZakNesler\\TailwindPreset\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Zak Nesler",
+                    "email": "contact@zaknesler.com"
+                }
+            ],
+            "description": "A Tailwind CSS preset for Laravel.",
+            "keywords": [
+                "laravel",
+                "laravel preset",
+                "preset",
+                "tailwind",
+                "tailwindcss"
+            ],
+            "time": "2019-04-20T13:51:55+00:00"
         }
     ],
     "packages-dev": [
@@ -4401,7 +4451,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "zaknesler/tailwind-preset": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
