@@ -9,7 +9,7 @@
         </div>
 
         <div class="block md:hidden">
-            <a @click.prevent="displayNavigation = !displayNavigation" class="p-2 flex items-center no-underline text-brand-700 hover:text-brand-900" href="#">
+            <a @click.prevent="displayNavigation = !displayNavigation" class="p-2 flex items-center no-underline text-brand-600 hover:text-brand-900" href="#">
                 <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                     <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
                 </svg>
@@ -18,10 +18,15 @@
 
         <div :class="{ hidden: !displayNavigation }" class="mt-6 md:mt-0 w-full md:w-auto md:flex md:flex-grow md:items-center">
             <div class="block md:flex-grow">
-                <ul class="-mb-6 md:-mr-6 md:mb-0 flex flex-col md:flex-row list-reset">
-                    <li class="mb-6 md:mr-6 md:mb-0">
-                        <a class="block md:inline text-brand-700 hover:text-brand-900 no-underline" href="{{ route('home') }}">
+                <ul class="-mb-6 md:-mr-4 md:mb-0 flex flex-col md:flex-row list-reset">
+                    <li class="mb-6 md:mr-4 md:mb-0">
+                        <a class="block md:inline text-brand-600 hover:text-brand-900 no-underline" href="{{ route('home') }}">
                             Home
+                        </a>
+                    </li>
+                    <li class="mb-6 md:mr-4 md:mb-0">
+                        <a class="block md:inline text-brand-600 hover:text-brand-900 no-underline" href="{{ route('checkout') }}">
+                            Checkout
                         </a>
                     </li>
                 </ul>
@@ -31,7 +36,19 @@
                 <ul class="-mb-6 md:-mr-6 md:mb-0 flex flex-col md:flex-row list-reset">
                     @auth
                         <li class="mb-6 md:mr-6 md:mb-0">
-                            <a class="block md:inline text-brand-700 hover:text-brand-900 no-underline" href="#" onclick="document.querySelector('#logoutForm').submit()">
+                            <dropdown text="Profile">
+                                <ul class="-mb-6 md:-mr-6 md:mb-0 flex flex-col md:flex-row list-reset">
+                                    <li class="mb-6 md:mr-6 md:mb-0">
+                                        <a class="block md:inline text-brand-600 hover:text-brand-900 no-underline" href="#">
+                                            Settings
+                                        </a>
+                                    </li>
+                                </ul>
+                            </dropdown>
+                        </li>
+
+                        <li class="mb-6 md:mr-6 md:mb-0">
+                            <a class="block md:inline text-brand-600 hover:text-brand-900 no-underline" href="#" onclick="document.querySelector('#logoutForm').submit()">
                                 Logout
                             </a>
                         </li>
@@ -41,13 +58,13 @@
                         </form>
                     @else
                         <li class="mb-6 md:mr-6 md:mb-0">
-                            <a class="block md:inline text-brand-700 hover:text-brand-900 no-underline" href="{{ route('login') }}">
+                            <a class="block md:inline text-brand-600 hover:text-brand-900 no-underline" href="{{ route('login') }}">
                                 Sign in
                             </a>
                         </li>
 
                         <li class="mb-6 md:mr-6 md:mb-0">
-                            <a class="block md:inline text-brand-700 hover:text-brand-900 no-underline" href="{{ route('register') }}">
+                            <a class="block md:inline text-brand-600 hover:text-brand-900 no-underline" href="{{ route('register') }}">
                                 Sign up
                             </a>
                         </li>

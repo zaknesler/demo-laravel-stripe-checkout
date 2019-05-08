@@ -1,3 +1,5 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 module.exports = {
   theme: {
     extend: {
@@ -6,23 +8,22 @@ module.exports = {
       },
       colors: {
         brand: {
-          100: '#ebf8ff',
-          200: '#bee3f8',
-          300: '#90cdf4',
-          400: '#63b3ed',
-          500: '#4299e1',
-          600: '#3182ce',
-          700: '#2b6cb0',
-          800: '#2c5282',
-          900: '#2a4365'
+          100: '#e0eeff',
+          200: '#b6d2ff',
+          300: '#80a3ff',
+          400: '#5483ff',
+          500: '#3453f9',
+          600: '#2740c2',
+          700: '#1b2d87',
+          800: '#121d59',
+          900: '#090e2b'
         }
+      },
+      boxShadow: {
+        outline: '0 0 0 4px rgba(52, 83, 249, 0.35)'
       }
     }
   },
-  variants: {
-    //
-  },
-  plugins: [
-    //
-  ]
+  variants: {},
+  plugins: []
 }

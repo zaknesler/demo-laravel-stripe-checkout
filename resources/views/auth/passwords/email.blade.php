@@ -21,6 +21,10 @@
 
                         <div class="p-8 text-gray-700 text-center">Reset your password</div>
 
+                        <div class="px-8 pb-8 text-gray-600 text-center">
+                            Enter your email to receive instructions about how to reset your password. If you do not remember your email address, please <a class="text-gray-700 hover:underline" href="#">contact support</a>.
+                        </div>
+
                         <div class="px-8">
                             @if (session('status'))
                                 <div class="mb-6 p-3 flex border border-brand-200 bg-brand-100 text-brand-700 leading-tight rounded-lg text-sm">

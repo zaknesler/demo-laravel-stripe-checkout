@@ -9,6 +9,7 @@
         <title>@hasSection('title') @yield('title') &dash; {{ config('app.name') }} @else {{ config('app.name') }} @endif</title>
 
         <link href="{{ mix('css/app.css') }}" rel="stylesheet">
+        @yield('scripts')
         <script src="{{ mix('js/app.js') }}" defer></script>
     </head>
     <body class="font-sans font-normal text-base tracking-normal leading-normal bg-white text-gray-700 min-h-full h-full">

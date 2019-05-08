@@ -18,3 +18,15 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/checkout', 'CheckoutController@index')->name('checkout');
+
+Route::get('/checkout/success', function () {
+    return view('checkout.success');
+})->name('checkout.success');
+
+Route::get('/checkout/canceled', function () {
+    return view('checkout.canceled');
+})->name('checkout.canceled');
+
+Route::stripeWebhooks('/webhooks/stripe');
